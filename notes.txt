@@ -1,0 +1,58 @@
+// Planning how to build UI 
+
+lecture 01 : things covered
+ -> import react libraries into html/js 
+ -> what are cdn Links
+ -> what are package and package.json file
+ -> what are ndoe_modules, .parcel-cache, and dist folder in react 
+ -> how to start an react application
+ -> what is parcel and its capabilities
+
+lecture 02 : things covered
+ -> what is jsx
+ -> what is babil - js compiler and tranpiler
+ -> basics about component rendering
+
+lecture 03: things covered
+ -> planning before desiging an application
+ -> use of props, configuration driven UI
+ -> types of export and import
+
+Header
+ -> Logo
+ -> Nav Items
+Body
+ -> Search
+ -> Individual Tiles
+Footer
+ -> Different Links
+ -> Address
+ -> Policies
+
+lecture 04, 05 : things covered
+
+ -> use of Hooks, type of hooks in react
+ -> State Variables
+ -> Concepts such as dom manipulation, Reconcilation algorithm, react fiber
+ -> type of architecture while designing an application - monlithic/ microservices
+ -> using actual data from swiggy api instead of dummy data
+
+ Day 02 - add top rated restaurants btn > 4.0 stars
+
+ React Hooks - Normal JS Utility Functions
+  - useState() -> syntax const [restaurant, setRestaurant] = useState([defaultObj]);
+  - useEffect() -> syntax useEffect(() => {fetchData()}, []);   
+  fetchData(), will fetch data from api call, and then update setRestaurant() to have updates resList
+  02. if there is no data, add no loading option..
+  03. 
+
+lecture 06 - things completed
+ -> useEffect hook   
+ -> using swiggy api to fetch restaurant list   
+ -> cors policy
+ -> shimmer UI - Shimmer component to replace loading screen - good alternative then loading option
+ -> conditional rendering
+ -> using state variable for login and logout btn toggle
+ -> add a input search btn and implement search functionality
+ -> onChange event handler, because input tag value is binded to state variable & can be directly changed
+ -> add new restaurants on user scrolls across page - <to be done>
