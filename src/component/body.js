@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect} from "react";
 import restaurantObj from "../utils/mockdata.js";
 import Shimmer from "./shimmerUI.js";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     const [restaurantList, setRestaurantList] = useState([]);
@@ -31,7 +32,7 @@ const Body = () => {
         <div className="search">
             <input type="text" id='search-bar' value={searchText} 
                 onChange={(e) => setSearchText(e.target.value)}/>
-            <button type="submit" onClick={
+            <button className="search-res" type="submit" onClick={
                 () => {
                     const resList = restaurantList.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
                     setFilteredRestaurant(resList);       
@@ -47,7 +48,7 @@ const Body = () => {
         </div>
         <div className="restaurant-tiles">
             {
-            filteredRestaurant.map(restaurant => <RestraurantCard key={restaurant.info.id} resData={restaurant}/>)
+                filteredRestaurant.map(restaurant => <Link to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}><RestraurantCard resData={restaurant}/></Link>)
             }
         </div>
     </div>

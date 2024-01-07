@@ -56,3 +56,17 @@ lecture 06 - things completed
  -> add a input search btn and implement search functionality
  -> onChange event handler, because input tag value is binded to state variable & can be directly changed
  -> add new restaurants on user scrolls across page - <to be done>
+
+lecture 07 - things covered
+ -> routing configuration
+ -> useBrowserRoute and RouteProvider
+ -> child routes
+ -> Link react router dom
+ -> dynamic routing
+    --> add individual restaurant cards
+    --> fetchMenu() - show recommended Items
+    --> try to build only veg options
+
+Types of Routing in Web Application 
+ -> Server Side Routing -> server sends an individual file for each request, having individual html files 
+ -> Client Side Routing -> having everything on browser side, single application page

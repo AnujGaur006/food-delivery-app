@@ -24,15 +24,23 @@
     margin: 10px;
     padding: 5px;
 }
+.nav-items ul li a{
+    text-decoration: none;
+    color: #000;
+}
 .restaurant-tile{
     width: 250px;
     height: 350px;
-    /* margin:0px 5px ; */
     border: 3px solid gray;
+    margin: 0px auto;
     margin-bottom:2px;
 }
 .restaurant-tile:hover{
     box-shadow: 0px 5px 20px gray;
+}
+.restaurant-tiles a{
+    text-decoration: none;
+    color: #000;
 }
 .restaurant-thumbnail{
     min-width: 220px;
@@ -44,14 +52,16 @@
 }
 .restaurant-tiles{
     display: flex;
+    width: 90%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 10px;
-    margin: 0px auto;
+    gap: 5px;
+    margin: 0 75px;
 }
 .search{
-    left:50px;
+    text-align: center; 
+    padding:5px 0px;
 }
 #search-bar{
     margin:5px;
@@ -59,6 +69,10 @@
 }
 .topRes{
     margin-left:5px;
+    padding:4px 8px;
+}
+.search-res{
+    padding:4px 2px;
 }
 .shimmer-tiles{
     display: flex;
@@ -71,11 +85,51 @@
 .shimmer-tile{
     width: 250px;
     height: 350px;
-    /* margin:0px 5px ; */
     margin-bottom:2px;
     background-color: rgb(252, 251, 251);
 }
 .login{
     margin:0 10px;
     padding:0 10px;
+}
+.menu{
+    width:45%;
+    margin:auto;
+    margin-top:28px;
+}
+#restaurantDetails{
+    display: flex;
+    justify-content: space-between;
+}
+.resInfo .resName{
+    font-size: 25px;
+    font-weight: 600;
+}
+.resInfo .resSubInfo, .resRating .resCustReviews{
+    font-size: 14px;
+}
+.resRating .resStarRating{
+    font-size: 25px;
+    font-weight: 600;
+    color: green;
+}
+.menu-items{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menuInfo{
+    padding:4px 6px;
+}
+.dish-icon{
+    width:130px;
+    height: 120px;
+}
+.menuTab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:2px dashed black;
+    padding:5px 10px; 
 }
