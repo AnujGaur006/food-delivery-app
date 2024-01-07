@@ -70,3 +70,15 @@ lecture 07 - things covered
 Types of Routing in Web Application 
  -> Server Side Routing -> server sends an individual file for each request, having individual html files 
  -> Client Side Routing -> having everything on browser side, single application page
+
+ lecture 08 -> things covered
+  -> class based component, state variables in class based component 
+  -> how class based component lifecycle looks like - first instance of that class is created, which calls constructor and then render 
+    is called
+  -> ComponentDidMount - useCase [to make api calls, ] follows same principle, component is called -> first render -> fetch data -> re-render
+  -> React lifecycle - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+  -> Render Phase[Mounting, Rendering, Unmounting], Commit Phase [componentDidMount, DidUpdate, Unmount]
+  -> making an api call inside a class based component
+  -> useEffect != ComponentDidMount
+  -> componentWillUnmount - is used for clean up task, when user exits certain component, unmount is called
+  -> similar thing is achieved in useEffect by returning executable fn in callback func parameter of useEffect . 
