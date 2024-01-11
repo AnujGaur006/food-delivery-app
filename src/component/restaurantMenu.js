@@ -2,27 +2,20 @@ import { useState,useEffect } from "react";
 import { MENU_ITEM_IMAGE } from "../utils/constants";
 import Shimmer from "./shimmerUI";
 import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-    const [restaurantMenu, setRestaurantMenu] = useState(null);
+    // const [restaurantMenu, setRestaurantMenu] = useState(null);
     const { resId } = useParams();
 
-    useEffect(() => {fetchMenu()}, []);
-
-    const fetchMenu = async () => {
-        const menuData = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.8466937&lng=80.94616599999999&restaurantId=" + resId + "&catalog_qa=undefined");
-        const menuDataJson = await menuData.json();
-
-        setRestaurantMenu(menuDataJson);
-    }
+    const restaurantMenu = useRestaurantMenu(resId);
 
     if (restaurantMenu === null) return <Shimmer/>;
     
     const {name, cuisines, locality, sla, avgRating, totalRatingsString} = restaurantMenu?.data?.cards[0]?.card?.card?.info;
     const { itemCards } = restaurantMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-    console.log(itemCards); 
+    // console.log(itemCards); 
    
-
     return (<div className="menu">
         <div id='restaurantDetails'>
             <div className="resInfo">

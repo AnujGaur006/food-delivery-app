@@ -83,19 +83,16 @@ Types of Routing in Web Application
   -> componentWillUnmount - is used for clean up task, when user exits certain component, unmount is called
   -> similar thing is achieved in useEffect by returning executable fn in callback func parameter of useEffect . 
 
-  lecture 08 -> things covered
-  -> class based component, state variables in class based component 
-  -> how class based component lifecycle looks like - first instance of that class is created, which calls constructor and then render 
-    is called
-  -> ComponentDidMount - useCase [to make api calls, ] follows same principle, component is called -> first render -> fetch data -> re-render
-  -> React lifecycle - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
-  -> Render Phase[Mounting, Rendering, Unmounting], Commit Phase [componentDidMount, DidUpdate, Unmount]
-  -> making an api call inside a class based component
-  -> useEffect != ComponentDidMount
-  -> componentWillUnmount - is used for clean up task, when user exits certain component, unmount is called
-  -> similar thing is achieved in useEffect by returning executable fn in callback func parameter of useEffect . 
-
   lecture 09 -> things covered
   -> single responsibility principle
   -> custom hooks - allows room to abstraction, modularity and cleaner code.
   -> online/offline feature
+  -> parcel handles bundling of application, but as app grows the size of bundled js also increases,
+   which can significantly decrease the performance of your ui, such as landing pages.
+  -> one solution to have small chunks of this file - Chunking/ Code Spitting
+  -> other terms for above - lazy loading/on demand loading, dynamic bundling, dynamic import
+  const Grocery_feature = lazy(() => import("./component/grocery.js"));
+  ->only doing this my not work, on request grocery js will be loaded independently it is not synchronous with
+  react,
+  -> Element should be warped in Suspense to clear out this issue.
+  <Suspense fallback={anything to render until Grocery is being loaded, forex <Shimmer/>}><Grocery/></Suspens> 

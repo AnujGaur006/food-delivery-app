@@ -4,6 +4,7 @@ import { useEffect} from "react";
 import restaurantObj from "../utils/mockdata.js";
 import Shimmer from "./shimmerUI.js";
 import { Link } from "react-router-dom";
+import useOnlineFeature from "../utils/useOnlineFeature.js";
 
 const Body = () => {
     const [restaurantList, setRestaurantList] = useState([]);
@@ -15,8 +16,8 @@ const Body = () => {
     const fetchRestaurants = async () => {
         const resList = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const data = await resList.json();
-        // const jsonData = JSON.stringify(data);
-    
+        // console.log(data); 
+
         setRestaurantList(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurant(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
@@ -25,8 +26,12 @@ const Body = () => {
 
     // every search input, for each character, dom structure is rerendered, as searchText value changes]
     // console.log("test");
+    
+    // conditional rendering 
 
-    // conditional rendering    
+    if(useOnlineFeature() === false)
+        return <h1 className="offline">Please check your internet connection!!</h1> 
+
     return restaurantList.length === 0 ? <Shimmer/> :  (
     <div className="container">
         <div className="search">
