@@ -17,8 +17,8 @@ const Body = () => {
         const data = await resList.json();
         // const jsonData = JSON.stringify(data);
     
-        setRestaurantList(data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurant(data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestaurantList(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurant(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
     const [searchText, setSearchText] = useState("");
@@ -41,7 +41,7 @@ const Body = () => {
             <button className="topRes" onClick=
             {
                 () => {
-                    let resList = restaurantList.filter( (restaurant) => restaurant.info.avgRating > 4.4);
+                    let resList = restaurantList.filter( (restaurant) => restaurant.info.avgRating >= 4.4);
                     setFilteredRestaurant(resList);  
                 }
             }>Top Restaurants</button>
