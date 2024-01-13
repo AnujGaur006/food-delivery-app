@@ -112,4 +112,9 @@ Types of Routing in Web Application
 
   lecture 11 - things covered
   -> higher order components = component that take another component as an input and return enhanced component
-  -> buildin accordian 
+  -> built accordian - display menu items under individual category
+  -> expand only one accordian at a time - Controlled and uncontrolled items
+  -> <lefting state up> - controlling child elements from parent
+  -> build - option to close the open category items
+  -> props drilling = passing data from parent to child elements
+  -> react-context - global values that can be assigned from any react component, for ex - user cred, theme  
