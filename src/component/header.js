@@ -15,18 +15,18 @@ const Header = () => {
     const isOnline = useOnlineFeature();
 
     return (
-    <div className="header">
+    <div className="header flex justify-between items-center border-4 border-black border-solid shadow-lg">
         <div className="logo-container">
-            <img className="logo" src={APP_LOGO}/>
+            <img className="logo w-44" src={APP_LOGO}/>
         </div>
-        <div className="nav-items">
-            <ul>
-                <h1>{isOnline===true?"✅":"🟥"}</h1>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/aboutus'>About Us</Link></li>
-                <li><Link to='/contactus'>Contact Us</Link></li>
-                <li><Link to='/grocery'>Grocery</Link></li>
-                <li>Cart</li>
+        <div className="nav-items p-2.5">
+            <ul className="flex justify-end">
+                <h1 className="m-2.5 p-1.5">Online Status:{isOnline===true?"✅":"🟥"}</h1>
+                <li className="m-2.5 p-1.5"><Link to='/'>Home</Link></li>
+                <li className="m-2.5 p-1.5"><Link to='/aboutus'>About Us</Link></li>
+                <li className="m-2.5 p-1.5"><Link to='/contactus'>Contact Us</Link></li>
+                <li className="m-2.5 p-1.5"><Link to='/grocery'>Grocery</Link></li>
+                <li className="m-2.5 p-1.5">Cart</li>
                 <button className="login" onClick={() => {
                     loginbtn === 'Login'? setLoginBtn("Logout") : setLoginBtn("Login");
                 }}>{loginbtn}</button>

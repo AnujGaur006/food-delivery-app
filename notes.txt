@@ -95,4 +95,21 @@ Types of Routing in Web Application
   ->only doing this my not work, on request grocery js will be loaded independently it is not synchronous with
   react,
   -> Element should be warped in Suspense to clear out this issue.
-  <Suspense fallback={anything to render until Grocery is being loaded, forex <Shimmer/>}><Grocery/></Suspens> 
+  <Suspense fallback={anything to render until Grocery is being loaded, forex <Shimmer/>}><Grocery/></Suspense>
+
+  lecture 10 -> things covered
+  -> sass : syntacically awesome style sheets - https://sass-lang.com/, but not scalable, not used in production ready applications
+  -> styled component - can be used to style react components -   https://styled-components.com/
+  -> CSS libraries/frameworks used in industry or talked about
+     -> material ui - https://mui.com/material-ui/
+     -> Bootstrap - https://getbootstrap.com/
+     -> Chakra UI - https://chakra-ui.com/
+     -> Ant Design - https://ant.design/
+  -> Tailwind - trending, to be used in this project - https://tailwindcss.com/
+  -> packages to be installed - tailwindcss, postcss(used behind the scenes to transform css using js)
+  -> npx tailwind init - will create a new file - tailwind.config.js
+  -> tailwind - avoid redundant css, disadvantages - makes code a little ugly, js file size increases
+
+  lecture 11 - things covered
+  -> higher order components = component that take another component as an input and return enhanced component
+  -> buildin accordian 
