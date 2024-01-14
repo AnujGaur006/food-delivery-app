@@ -118,3 +118,22 @@ Types of Routing in Web Application
   -> build - option to close the open category items
   -> props drilling = passing data from parent to child elements
   -> react-context - global values that can be assigned from any react component, for ex - user cred, theme  
+
+  lecture 12 - things covered
+  -> redux - works in data layer, helps to manage state of react app, offer data and store mgmt  
+  -> react and redux are different libraries
+  -> alternative - 
+  -> react store - a single object, with slices to hold state of different components
+  -> Workflow : Btn clicked -> Action is dispatched -> calls a function() [reducer] -> cart is modified by func
+  (slice of redux store)
+  -> Reading from redux store : Cart (Redux store) -> selector (known as subsribing to a store)-> fetch data from cart
+  -> reducer gets two params, state and action 
+  -> selector can be considered as hook in react
+  -> while subscribing to a store, we should interact with a component that is needed, should not subsribe to 
+    whole store and then fetch.
+  -> difference bw store reducer and slice reducers
+  -> code used in Vanialla(order) Redux => Don't mutate state
+  // const newState = [...state];
+  // newState.items.push(action.payload);
+  // return newState;
+  -> immer library is used to mutate the state no in redux/toolkit   

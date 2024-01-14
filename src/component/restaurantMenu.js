@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
 
     // react context
     const {loggedInUser} = useContext(UserContext);
-    console.log("User : " + loggedInUser);
+    // console.log("User : " + loggedInUser);
 
     if (restaurantMenu === null) return <Shimmer/>;
     

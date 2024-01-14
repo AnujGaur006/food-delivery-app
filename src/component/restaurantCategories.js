@@ -12,7 +12,7 @@ const RestaurantCategories = ({data, showItem, setShowIndex}) => {
                 <div>{title}&nbsp;({items.length})</div>
                 <span>🔽</span>
            </div>
-            {showItem && items.map((item) => <MenuList list={item}/>)}
+            {showItem && items.map((item) => <MenuList key={item.card.info.name} list={item}/>)}
         </div>      
     );
 }

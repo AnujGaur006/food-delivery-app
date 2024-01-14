@@ -16,7 +16,7 @@ export const withOfferRestaurant = (RestraurantCard) => {
     return (props) => {
         return (
             <div>
-                <label className="absolute text-xs bg-black text-white p-2 rounded-lg">Open</label>
+                <label className="absolute text-xs bg-black mt-2 p-1 ml-[-102px] text-white rounded-lg">Open</label>
                 <RestraurantCard {...props}/>
             </div>
         );
